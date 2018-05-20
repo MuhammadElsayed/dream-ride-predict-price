@@ -79,14 +79,16 @@ def get_delay():
     result=request.form
     year_model = result['year_model']
     mileage = result['mileage']
-    mark = result['mark']
-    fiscal_power = result['fiscal_power']
-    fuel_type = result['fuel_type']
+    make = result['make']
+    model = result['model']
 
-    user_input = {'year_model':year_model, 'mileage':mileage, 'fiscal_power':fiscal_power, 'fuel_type':fuel_type, 'mark':mark}
+    user_input = {'year_model':year_model, 'mileage':mileage, 'model':model, 'make':make}
     
     print(user_input)
-    a = input_to_one_hot(user_input)
+
+
+
+
     price_pred = gbr.predict([a])[0]
     price_pred = round(price_pred, 2)
     return json.dumps({'price':price_pred});

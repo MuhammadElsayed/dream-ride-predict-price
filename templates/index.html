@@ -36,20 +36,8 @@
 					Cars Price Prediction
 				</span>
 
-				<div class="wrap-input100 validate-input" data-validate="Mileage is required">
-					<span class="label-input100">Mileage</span>
-					<input class="input100" type="text" id="mileage" name="mileage" placeholder="145364">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate="Year of model is required">
-					<span class="label-input100">Year of model</span>
-					<input class="input100" type="text" id="year_model" name="year_model" placeholder="2009">
-					<span class="focus-input100"></span>
-				</div>
-
 				<div class="wrap-input100 input100-select">
-					<span class="label-input100">Mark</span>
+					<span class="label-input100">Make</span>
 					<div>
 						<select class="selection-2" id="mark" name="mark">
 							<option value="Renault">Renault </option>
@@ -63,24 +51,32 @@
 					<span class="focus-input100"></span>
 				</div>
 
-				<div class="wrap-input100 validate-input" data-validate="fiscal power is required">
-					<span class="label-input100">Fiscal power</span>
-					<input class="input100" type="text" id="fiscal_power" name="fiscal_power" placeholder="7">
-					<span class="focus-input100"></span>
-				</div>
+                <div class="wrap-input100 input100-select">
+                    <span class="label-input100">Model</span>
+                    <div>
+                        <select class="selection-2" id="model" name="model">
+                            <option value="Renault">Renault </option>
+                            <option value="Dacia">Dacia </option>
+                            <option value="Peugeot">Peugeot</option>
+                            <option value="Volkswagen">Volkswagen</option>
+                            <option value="BMW" selected>BMW </option>
+                            <option value="Fiat">Fiat</option>
+                        </select>
+                    </div>
+                    <span class="focus-input100"></span>
+                </div>
 
-				<div class="wrap-input100 input100-select">
-					<span class="label-input100">Fuel type</span>
-					<div>
-						<select class="selection-2" id="fuel_type" name="fuel_type">
-							<option value="Diesel" selected="">Diesel </option>
-							<option value="Essence">Essence </option>
-							<option value="Electrique">Electrique</option>
-							<option value="LPG">LPG</option>
-						</select>
-					</div>
-					<span class="focus-input100"></span>
-				</div>
+                <div class="wrap-input100 validate-input" data-validate="Mileage is required">
+                    <span class="label-input100">Mileage</span>
+                    <input class="input100" type="text" id="mileage" name="mileage" placeholder="145364">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Year of model is required">
+                    <span class="label-input100">Year of model</span>
+                    <input class="input100" type="text" id="year_model" name="year_model" placeholder="2009">
+                    <span class="focus-input100"></span>
+                </div>
 
 				<div class="container-contact100-form-btn">
 					<div class="wrap-contact100-form-btn">
@@ -132,9 +128,9 @@
 	        	e.preventDefault();
 	        	/*Get for variabes*/
 	        	var mileage = $("#mileage").val(), year_model = $("#year_model").val(), mark = $("#mark").val();
-	        	var fiscal_power = $("#fiscal_power").val(), fuel_type = $("#fuel_type").val();
+	        	var model = $("#model").val();
 	        	/*create the JSON object*/
-	        	var data = {"mileage":mileage, "year_model":year_model, "mark":mark, "fiscal_power":fiscal_power, "fuel_type":fuel_type}
+	        	var data = {"mileage":mileage, "year_model":year_model, "make":mark, "model":model}
 	        	/*send the ajax request*/
 	        	$.ajax({
 	        		method : "POST",
