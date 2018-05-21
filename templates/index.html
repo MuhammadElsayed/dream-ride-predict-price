@@ -95,8 +95,8 @@
 
 
 
-	<div id="dropDownSelect1"></div>
-
+	<div id="dropDownSelect1"></div>=-->
+	<script src="{{ url_for('data',filename='mm.json') }}"></script>
 <!--===============================================================================================-->
 	<script src="{{ url_for('static',filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 <!--===============================================================================================-->
@@ -123,6 +123,13 @@
 	<script src="{{ url_for('static',filename='js/sweetalert2.all.js') }}"></script>
 	<script type="text/javascript">
 		$(function () {
+
+
+		    var makeModels = JSON.parse(mm);
+            $.map(arr, function(item){
+                if ($.inArray(item.name, result))
+                    result.push(item.name);
+            });
 
 	        $("button#predict").click(function(e){
 	        	e.preventDefault();
