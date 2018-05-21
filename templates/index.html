@@ -8016,10 +8016,11 @@
 		    //console.log(mm);
 			var makes = [];
             $.map(mm, function(item){
-                if (!($.inArray(item.m, result)))
-                    result.push(item.m);
-                result[item.m].push(item.l);
+                if (!($.inArray(item.m, makes)))
+                    makes.push(item.m);
+                makes[item.m].push(item.l);
             });
+            console.log(makes);
 
 	        $("button#predict").click(function(e){
 	        	e.preventDefault();
