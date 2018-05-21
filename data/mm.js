@@ -1,4 +1,4 @@
-[
+var mm = [
  {
    "Make": "Acura",
    "Model": "CLAutomatic"
