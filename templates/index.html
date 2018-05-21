@@ -126,10 +126,11 @@
 
 
 		    var makeModels = JSON.parse(mm);
-            $.map(arr, function(item){
-                if ($.inArray(item.name, result))
-                    result.push(item.name);
-            });
+		    console.log(makeModels);
+            // $.map(arr, function(item){
+            //     if ($.inArray(item.name, result))
+            //         result.push(item.name);
+            // });
 
 	        $("button#predict").click(function(e){
 	        	e.preventDefault();
