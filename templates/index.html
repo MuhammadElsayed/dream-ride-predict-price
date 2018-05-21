@@ -2197,10 +2197,12 @@
             ]
         }
 
+        	var makesOptions = "";
             for (var make in makes) {
 
-            	$("#mark").innerHTML += '<option value="' + make + '">' + make + '</option>';
+                makesOptions += '<option value="' + make + '">' + make + '</option>';
             }
+            $("#mark").innerHTML = makesOptions;
 
 	        $("button#predict").click(function(e){
 	        	e.preventDefault();
