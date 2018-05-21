@@ -2199,12 +2199,16 @@
                 select.appendChild(newOption);
             }
             $('#mark').on('change', function() {
-                var make = this.value;
-                var modelSelect = document.getElementById('model');
-                for (var model in makes[make]) {
+                var make = makes[this.value];
+                var modelSelect = document.getElementById('model');var i;
+                for(i = modelSelect.options.length - 1 ; i >= 0 ; i--)
+                {
+                    modelSelect.remove(i);
+                }
+                for (var model in make) {
                     newOption = document.createElement('option');
-                    newOption.value=model;
-                    newOption.text=model;
+                    newOption.value=make[model];
+                    newOption.text=make[model];
                     modelSelect.appendChild(newOption);
                 }
             });
