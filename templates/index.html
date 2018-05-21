@@ -121,7 +121,8 @@
 	<!-- include sweetAlert plugin -->
 	<script src="{{ url_for('static',filename='js/sweetalert2.all.js') }}"></script>
 	<script type="text/javascript">
-		$(function () {var mm = [
+		$(function () {
+		    var mm = [
             {
                 m: "Acura",
                 l: "CLAutomatic"
@@ -8017,7 +8018,7 @@
 			var makes = [];
             $.map(mm, function(item){
                 if (!($.inArray(item.m, makes)))
-                    makes.push(item.m);
+                    makes[item.m] = [];
                 makes[item.m].push(item.l);
             });
             console.log(makes);
