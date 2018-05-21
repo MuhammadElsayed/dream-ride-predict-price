@@ -2197,12 +2197,13 @@
             ]
         }
 
-        	var makesOptions = "";
+            var select = document.getElementById('mark');
             for (var make in makes) {
-
-                makesOptions += '<option value="' + make + '">' + make + '</option>';
+                newOption = document.createElement('option');
+                newOption.value=make;
+                newOption.text=make;
+                select.appendChild(newOption);
             }
-            $("#mark").innerHTML = makesOptions;
 
 	        $("button#predict").click(function(e){
 	        	e.preventDefault();
