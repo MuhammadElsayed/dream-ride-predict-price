@@ -4207,12 +4207,20 @@
             var select = document.getElementById('mark');
             for (var make in makes) {
                 newOption = document.createElement('option');
-                newOption.value=make;
+                newOption.value=makes_map[make];
                 newOption.text=make;
                 select.appendChild(newOption);
             }
             $('#mark').on('change', function() {
-                var make = makes[this.value];
+                var encodedMake = this.value;
+                var makeName;
+				for (var m in makes_map) {
+				    if (makes_map[m] == encodedMake) {
+                        makeName = m;
+				        break;
+					}
+				}
+                var make = makes[makeName];
                 var modelSelect = document.getElementById('model');var i;
                 for(i = modelSelect.options.length - 1 ; i >= 0 ; i--)
                 {
@@ -4220,7 +4228,7 @@
                 }
                 for (var model in make) {
                     newOption = document.createElement('option');
-                    newOption.value=make[model];
+                    newOption.value= models_map[make[model]];
                     newOption.text=make[model];
                     modelSelect.appendChild(newOption);
                 }
@@ -4238,11 +4246,11 @@
 	        	$.ajax({
 	        		method : "POST",
 	        		url : window.location.href + 'api',
-	        		data : JSON.stringify(data),
+	        		data : $('form').serialize(),
 	        		success : function(result){
 	        			var json_result = JSON.parse(result);
 	        			var price = json_result['price'];
-	        			swal('Estimated price is $ '+price, '','success')
+	        			swal('Estimated price is '+price+' DH', '','success')
 	        		},
 	        		error : function(){
 	        			console.log("error")
