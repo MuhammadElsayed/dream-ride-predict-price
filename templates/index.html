@@ -4233,6 +4233,7 @@
 	        	var model = $("#model").val();
 	        	/*create the JSON object*/
 	        	var data = {"mileage":mileage, "year_model":year_model, "make":makes_map[mark], "model":models_map[model]}
+	        	console.log(data);
 	        	/*send the ajax request*/
 	        	$.ajax({
 	        		method : "POST",
