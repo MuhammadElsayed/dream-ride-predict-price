@@ -79,19 +79,21 @@ def get_delay():
     result=request.form
     year_model = result['year_model']
     mileage = result['mileage']
-    make = result['make']
+    make = result['mark']
     model = result['model']
 
     user_input = {'year_model':year_model, 'mileage':mileage, 'model':model, 'make':make}
     
     print(user_input)
 
+    #a = input_to_one_hot(user_input)
 
 
+    price_pred = gbr.predict([user_input])[0]
+    #price_pred = round(price_pred, 2)
+    return json.dumps({'price': price_pred});
 
-    price_pred = gbr.predict([a])[0]
-    price_pred = round(price_pred, 2)
-    return json.dumps({'price':price_pred});
+    #return json.dumps({'price $500'});
     # return render_template('result.html',prediction=price_pred)
 
 if __name__ == '__main__':
