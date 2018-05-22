@@ -158,10 +158,10 @@ iframe {
   align-items: center;
   padding: 15px;
   background: #a64bf4;
-  background: -webkit-linear-gradient(45deg, #212529, #ffcbb6);
-  background: -o-linear-gradient(45deg, #212529, #ffcbb6);
-  background: -moz-linear-gradient(45deg, #212529, #ffcbb6);
-  background: linear-gradient(45deg, #212529, #ffcbb6);
+  background: -webkit-linear-gradient(45deg, #212529, #e0c6bc);
+  background: -o-linear-gradient(45deg, #212529, #e0c6bc);
+  background: -moz-linear-gradient(45deg, #212529, #e0c6bc);
+  background: linear-gradient(45deg, #212529, #e0c6bc);
   
 }
 
@@ -302,10 +302,10 @@ textarea.input100 {
   width: 300%;
   height: 100%;
   background: #a64bf4;
-  background: -webkit-linear-gradient(left, #212529, #ffcbb6, #212529, #ffcbb6);
-  background: -o-linear-gradient(left, #212529, #ffcbb6, #212529, #ffcbb6);
-  background: -moz-linear-gradient(left, #212529, #ffcbb6, #212529, #ffcbb6);
-  background: linear-gradient(left, #212529, #ffcbb6, #212529, #ffcbb6);
+  background: -webkit-linear-gradient(left, #212529, #e0c6bc, #212529, #e0c6bc);
+  background: -o-linear-gradient(left, #212529, #e0c6bc, #212529, #e0c6bc);
+  background: -moz-linear-gradient(left, #212529, #e0c6bc, #212529, #e0c6bc);
+  background: linear-gradient(left, #212529, #e0c6bc, #212529, #e0c6bc);
   top: 0;
   left: -100%;
 
@@ -529,19 +529,19 @@ textarea.input100 {
 
 .select2-container .select2-results__option[aria-selected="true"] {
   background: #a64bf4;
-  background: -webkit-linear-gradient(right, #212529, #ffcbb6);
-  background: -o-linear-gradient(right, #212529, #ffcbb6);
-  background: -moz-linear-gradient(right, #212529, #ffcbb6);
-  background: linear-gradient(right, #212529, #ffcbb6);
+  background: -webkit-linear-gradient(right, #212529, #e0c6bc);
+  background: -o-linear-gradient(right, #212529, #e0c6bc);
+  background: -moz-linear-gradient(right, #212529, #e0c6bc);
+  background: linear-gradient(right, #212529, #e0c6bc);
   color: white;
 }
 
 .select2-container .select2-results__option--highlighted[aria-selected] {
   background: #a64bf4;
-  background: -webkit-linear-gradient(right, #212529, #ffcbb6);
-  background: -o-linear-gradient(right, #212529, #ffcbb6);
-  background: -moz-linear-gradient(right, #212529, #ffcbb6);
-  background: linear-gradient(right, #212529, #ffcbb6);
+  background: -webkit-linear-gradient(right, #212529, #e0c6bc);
+  background: -o-linear-gradient(right, #212529, #e0c6bc);
+  background: -moz-linear-gradient(right, #212529, #e0c6bc);
+  background: linear-gradient(right, #212529, #e0c6bc);
   color: white;
 }
 
