@@ -4212,7 +4212,7 @@
                 select.appendChild(newOption);
             }
             $('#mark').on('change', function() {
-                var make = makes[this.value];
+                var make = makes[this.text()];
                 var modelSelect = document.getElementById('model');var i;
                 for(i = modelSelect.options.length - 1 ; i >= 0 ; i--)
                 {
