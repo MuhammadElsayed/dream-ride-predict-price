@@ -4207,7 +4207,7 @@
             var select = document.getElementById('mark');
             for (var make in makes) {
                 newOption = document.createElement('option');
-                newOption.value=make;
+                newOption.value=makes_map[make];
                 newOption.text=make;
                 select.appendChild(newOption);
             }
@@ -4220,7 +4220,7 @@
                 }
                 for (var model in make) {
                     newOption = document.createElement('option');
-                    newOption.value=make[model];
+                    newOption.value=models_map[make[model]];
                     newOption.text=make[model];
                     modelSelect.appendChild(newOption);
                 }
@@ -4232,8 +4232,8 @@
 	        	var mileage = $("#mileage").val(), year_model = $("#year_model").val(), mark = $("#mark").val();
 	        	var model = $("#model").val();
 	        	/*create the JSON object*/
-	        	var data = {"mileage":mileage, "year_model":year_model, "make":makes_map[mark], "model":models_map[model]}
-	        	console.log(data);
+	        	// var data = {"mileage":mileage, "year_model":year_model, "make":makes_map[mark], "model":models_map[model]}
+	        	// console.log(data);
 	        	/*send the ajax request*/
 	        	$.ajax({
 	        		method : "POST",
