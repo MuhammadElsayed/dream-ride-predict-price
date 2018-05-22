@@ -4242,7 +4242,7 @@
 	        		success : function(result){
 	        			var json_result = JSON.parse(result);
 	        			var price = json_result['price'];
-	        			swal('Estimated price is '+price+' DH', '','success')
+	        			swal('Estimated price is $ '+price, '','success')
 	        		},
 	        		error : function(){
 	        			console.log("error")
